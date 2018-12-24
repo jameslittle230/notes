@@ -32,3 +32,19 @@ Then you can run `python object_detection/builders/model_builder_test.py` and it
 You need a config file and a TFRecord file and a labelmap file
 
 Make sure `object_detection/modeldir/` is empty: `rm -r object_detection/modeldir/*`
+
+The command to begin training:
+
+```bash
+PIPELINE_CONFIG_PATH="nbl-tf-test.config"
+MODEL_DIR="./object_detection/modeldir"
+NUM_TRAIN_STEPS=50000
+SAMPLE_1_OF_N_EVAL_EXAMPLES=1
+
+python3 object_detection/model_main.py \
+    --pipeline_config_path=${PIPELINE_CONFIG_PATH} \
+    --model_dir=${MODEL_DIR} \
+    --num_train_steps=${NUM_TRAIN_STEPS} \
+    --sample_1_of_n_eval_examples=$SAMPLE_1_OF_N_EVAL_EXAMPLES \
+    --alsologtostderr
+```
