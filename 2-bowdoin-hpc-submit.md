@@ -11,7 +11,7 @@ Script header:
 Submit a job using the GPU:
 
 ```bash
-qsub -l gpuk20=1  myscript.sh
+qsub -l gpuk20=1 myscript.sh
 ```
 
 Interactive login into a GPU system:
