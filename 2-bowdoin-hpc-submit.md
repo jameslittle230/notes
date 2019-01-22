@@ -19,3 +19,8 @@ Interactive login into a GPU system:
 ```bash
 qrsh -l gpuk20=1
 ```
+
+Connect to the HPC Filesystem from a Mac:
+
+- From the Finder, choose Go/Connect to Server...
+- Below "Server Address", type `smb://microwave/hpc-research`
