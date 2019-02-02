@@ -13,7 +13,7 @@ $ sudo passwd freddie
 **3\. Add them to the `developers` group**
 
 ```
-sudo usermod -a -G developers conrad
+sudo usermod -a -G developers freddie
 ```
 
 **4\. Change the SSHD config so that they can log into the devbox with a password**
