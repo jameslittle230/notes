@@ -10,7 +10,13 @@ $ sudo useradd freddie
 $ sudo passwd freddie
 ```
 
-**3\. Change the SSHD config so that they can log into the devbox with a password**
+**3\. Add them to the `developers` group**
+
+```
+sudo usermod -a -G developers conrad
+```
+
+**4\. Change the SSHD config so that they can log into the devbox with a password**
 
 ```
 $ sudo vim /etc/ssh/sshd_config
@@ -23,11 +29,12 @@ Match User freddie
 PasswordAuthentication yes
 ```
 
-**4\. Restart SSHD**
+**5\. Restart SSHD**
 
 ```
 $ sudo service sshd restart
 ```
 
-**5\. Add them to the devbox dashboard**
+**6\. Add them to the devbox dashboard**
 
+That's a file change, you'll have to do that manually
